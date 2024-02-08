@@ -42,6 +42,8 @@ session = HTMLSession()
 # Fetch the restart page (may end up with a login form)
 r = session.get(RESTART_URL)
 check_response(r)
+r = session.get(RESTART_URL)
+check_response(r)
 form = find_form(r)
 form_action = form.attrs['action']
 
